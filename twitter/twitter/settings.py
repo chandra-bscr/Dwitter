@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS=['https://dwitter.up.railway.app/login']
+CSRF_TRUSTED_ORIGINS=['https://dwitter.up.railway.app']
 
 ROOT_URLCONF = 'twitter.urls'
 
