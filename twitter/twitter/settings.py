@@ -77,30 +77,22 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 
 # DATABASES = {
 #     'default': {
-#        'ENGINE': 'django.db.backends.sqlite',
-#        'NAME': 'twitter_database',
-#        'USER': 'postgres',
-#        'PASSWORD': 'Chandra@1234',
-#        'HOST': 'localhost',
-#        'PORT': '5432'
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+import dj_database_url
 from dotenv import dotenv_values
 env_vars=dotenv_values()
+DB_PASSWORD=env_vars['DB_PASSWORD']
+DB_HOST=env_vars['DB_HOST']
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.postgresql',
        'NAME': 'postgres',
        'USER': 'postgres',
-       'PASSWORD': env_vars['DB_PASSWORD'],
-       'HOST': env_vars['DB_HOST'],
+       'PASSWORD': DB_PASSWORD,
+       'HOST': DB_HOST,
        'PORT': '5432'
     }
 }
