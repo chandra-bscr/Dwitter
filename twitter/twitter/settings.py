@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
-CSRF_TRUSTED_ORIGINS=['https://dwitter.up.railway.app/login','https://dwitter.up.railway.app/register'] 
+import os 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -50,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CSRF_TRUSTED_ORIGINS=['https://dwitter.up.railway.app/login']
 
 ROOT_URLCONF = 'twitter.urls'
 
