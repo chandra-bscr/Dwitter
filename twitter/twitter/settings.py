@@ -81,7 +81,6 @@ WSGI_APPLICATION = 'twitter.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-import dj_database_url
 from dotenv import dotenv_values
 env_vars=dotenv_values()
 DB_PASSWORD=env_vars['DB_PASSWORD']
