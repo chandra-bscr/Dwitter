@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-CSRF_TRUSTED_ORIGINS=['*'] 
+CSRF_TRUSTED_ORIGINS=['https://dwitter.up.railway.app/'] 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i5&k7=ed&2#nxe!m0wk*^k^%psg1ljw6e5d*5+u9xr%4@5@4vk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://dwitter.up.railway.app/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
